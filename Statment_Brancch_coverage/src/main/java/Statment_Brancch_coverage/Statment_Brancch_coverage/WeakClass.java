@@ -25,4 +25,17 @@ public class WeakClass {
 			return 0;
 		}
 	}
+
+	public static int weakMethod3(int x, int y) {
+		if (y == 0)
+			throw new ArithmeticException("Attempting to devide by 0");
+		if (x == 0)
+			x += 10;
+		double devisionResult = (double) x / y;
+		if (devisionResult > 0)
+			return 1;
+		else
+			return -1;
+
+	}
 }
