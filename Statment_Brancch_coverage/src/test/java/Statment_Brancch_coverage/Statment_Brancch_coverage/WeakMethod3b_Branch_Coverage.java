@@ -7,12 +7,12 @@ import org.junit.Test;
 public class WeakMethod3b_Branch_Coverage {
 	@Test
 	public void Positive_Result() {
-		assertEquals(1, WeakClass.weakMethod3(0, 5));
+		assertEquals(1, WeakClass.weakMethod3(0, 3));
 	}
 
 	@Test
 	public void Negative_Result() {
-		assertEquals(-1, WeakClass.weakMethod3(0, -5));
+		assertEquals(-1, WeakClass.weakMethod3(5, -5));
 	}
 
 	@Test

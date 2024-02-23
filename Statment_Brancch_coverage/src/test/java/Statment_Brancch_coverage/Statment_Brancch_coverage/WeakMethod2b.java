@@ -7,7 +7,7 @@ import org.junit.Test;
 public class WeakMethod2b {
 	@Test
 	public void weakMethod_Positive_2() {
-		assertEquals(1, WeakClass.weakMethod2(3, 2));
+		assertEquals(1, WeakClass.weakMethod2(3, 1));
 	}
 	
 	@Test

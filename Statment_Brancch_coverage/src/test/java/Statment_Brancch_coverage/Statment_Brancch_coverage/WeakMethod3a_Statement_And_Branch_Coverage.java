@@ -12,6 +12,6 @@ public class WeakMethod3a_Statement_And_Branch_Coverage {
 
 	@Test
 	public void Negative_result() {
-		assertEquals(-1, WeakClass.weakMethod3(0, -3));
+		assertEquals(-1, WeakClass.weakMethod3(-1, 3));
 	}
 }
