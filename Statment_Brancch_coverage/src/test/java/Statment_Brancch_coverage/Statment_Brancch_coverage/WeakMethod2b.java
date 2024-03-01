@@ -9,12 +9,12 @@ public class WeakMethod2b {
 	public void weakMethod_Positive_2() {
 		assertEquals(1, WeakClass.weakMethod2(3, 1));
 	}
-	
+
 	@Test
 	public void weakMethod_Negative_2() {
 		assertEquals(-1, WeakClass.weakMethod2(-5, 2));
 	}
-	
+
 	@Test
 	public void weakMethod_Zero_2() {
 		assertEquals(0, WeakClass.weakMethod2(0, 2));
