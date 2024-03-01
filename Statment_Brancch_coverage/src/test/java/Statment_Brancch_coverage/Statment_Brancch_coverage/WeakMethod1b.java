@@ -13,7 +13,7 @@ public class WeakMethod1b {
 
 	@Test
 	public void weakMethod_Negative() {
-		int expected = -1, result = WeakClass.weakMethod1(-10, 2);
+		int expected = -1, result = WeakClass.weakMethod1(-10, 3);
 		assertEquals(expected, result, 0.001);
 	}
 }
