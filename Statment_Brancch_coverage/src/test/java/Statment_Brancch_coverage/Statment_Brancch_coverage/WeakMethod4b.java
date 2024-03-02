@@ -5,8 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
- * This JUnit test class aims to create a test suite that achieves less than 100% condition coverage
- * for the weakMethod4 function in the WeakClass while exposing the division by zero error.
+ * This JUnit test class aims to create a test suite that achieves less than
+ * 100% branch coverage for the weakMethod4 function in the WeakClass while
+ * exposing the division by zero error.
  */
 public class WeakMethod4b {
 
@@ -31,20 +32,10 @@ public class WeakMethod4b {
 
 	/**
 	 * This test method verifies that the weakMethod4 function returns the expected
-	 * result when x is negative and y is positive.
-	 */
-	@Test
-	public void First_Negative() {
-		double expected = -10 / 5;
-		assertEquals(expected, WeakClass.weakMethod4(-10, 5), 0.001);
-	}
-
-	/**
-	 * This test method verifies that the weakMethod4 function returns the expected
 	 * result when x is positive and y is negative.
 	 */
 	@Test
-	public void Second_Negative() {
+	public void First_Postive_Second_Negative() {
 		double expected = -10 / 5;
 		assertEquals(expected, WeakClass.weakMethod4(10, -5), 0.001);
 	}
@@ -59,11 +50,11 @@ public class WeakMethod4b {
 	}
 
 	/**
-	 * This test method verifies that the weakMethod4 function returns the expected
-	 * result when x is negative and y is zero.
+	 * This test method verifies that the weakMethod4 function throws an
+	 * ArithmeticException when attempting to perform a division by zero.
 	 */
-	@Test
-	public void First_Negative_Seocond_Zero() {
-		assertEquals(0, WeakClass.weakMethod4(-10, 0), 0.001);
+	@Test(expected = ArithmeticException.class)
+	public void First_Positive_Seocond_Zero() {
+		assertEquals(0, WeakClass.weakMethod4(10, 0), 0.001);
 	}
 }
